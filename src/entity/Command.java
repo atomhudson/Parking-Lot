@@ -3,33 +3,22 @@ package entity;
 import java.util.HashMap;
 
 public enum Command {
-    CREATE_PARKING_LOT("CREATE_PARKING_LOT","Creates a new parking lot." ,"CREATE_PARKING_LOT <name_of_parking_lot> <number_of_floor> <number_of_slots>"),
-    DISPLAY("DISPLAY","Displays the parking lot details based on the chosen display type." ,"DISPLAY <display_type> <vehicle_type>"),
-    PARK_VEHICLE("PARK_VEHICLE","Parks a vehicle in the parking lot." ,"PARK_VEHICLE <vehicle_registration_number> <vehicle_color>"),
-    UNPARK_VEHICLE("UNPARK_VEHICLE","Unparks a vehicle from the parking lot." ,"UNPARK_VEHICLE <ticket_id>"),
-    EXIT("EXIT","Exits the program." ,"EXIT"),
-    HELP("HELP","Displays the list of available commands with descriptions.","HELP or help");
+    CREATE_PARKING_LOT("CREATE_PARKING_LOT"),
+    DISPLAY("DISPLAY"),
+    PARK_VEHICLE("PARK_VEHICLE"),
+    UNPARK_VEHICLE("UNPARK_VEHICLE"),
+    EXIT("EXIT"),
+    HELP("HELP");
 
     private final String command;
-    private final String description;
-    private final String syntax;
 
-
-    Command(String s,String description ,String syntax){
-        this.command = s;
-        this.description = description;
-        this.syntax = syntax;
+    Command(String s) {
+        command = s;
     }
 
     @Override
     public String toString() {
         return this.command;
-    }
-    public String getDescription() {
-        return this.description;
-    }
-    public String getSyntax() {
-        return this.syntax;
     }
 
     private static final HashMap<String, Command> map = new HashMap<>(values().length, 1);
@@ -42,5 +31,44 @@ public enum Command {
 
     public static Command of(String name) {
         return map.get(name);
+    }
+
+    // Get description and syntax for the commands
+    public String getDescription() {
+        switch (this) {
+            case CREATE_PARKING_LOT:
+                return "Creates a new parking lot.";
+            case PARK_VEHICLE:
+                return "Parks a vehicle in the parking lot.";
+            case UNPARK_VEHICLE:
+                return "Unparks a vehicle from the parking lot.";
+            case DISPLAY:
+                return "Displays parking lot details based on display type.";
+            case EXIT:
+                return "Exits the program.";
+            case HELP:
+                return "Displays the list of available commands with descriptions.";
+            default:
+                return "Unknown command.";
+        }
+    }
+
+    public String getSyntax() {
+        switch (this) {
+            case CREATE_PARKING_LOT:
+                return "CREATE_PARKING_LOT <name_of_parking_lot> <number_of_floor> <number_of_slots>";
+            case PARK_VEHICLE:
+                return "PARK_VEHICLE <vehicle_type> <vehicle_registration_number> <vehicle_color>";
+            case UNPARK_VEHICLE:
+                return "UNPARK_VEHICLE <ticket_id>";
+            case DISPLAY:
+                return "DISPLAY <display_type> <vehicle_type>";
+            case EXIT:
+                return "EXIT";
+            case HELP:
+                return "HELP";
+            default:
+                return "Unknown syntax.";
+        }
     }
 }

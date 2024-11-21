@@ -1,5 +1,5 @@
 # System Design
-
+---
 ## LLD (Low-Level Design)
 1. **Clarify all the requirements.**
 2. **Requirement Collection.**
@@ -452,10 +452,3 @@ Occupied slots for TRUCK on Floor 2: 1
 - Keep the code extensible to allow any other type of command. 
 - Keep the code extensible to allow multiple parking lots. You can assume that the input/output format can be changed for that. 
 - Keep the system thread-safe to allow concurrent requests.
-
-
-
-
-
-
-
