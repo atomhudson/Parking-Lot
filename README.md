@@ -455,3 +455,6 @@ Occupied slots for TRUCK on Floor 2: 1
 - Keep the code extensible to allow any other type of command. 
 - Keep the code extensible to allow multiple parking lots. You can assume that the input/output format can be changed for that. 
 - Keep the system thread-safe to allow concurrent requests.
+
+![Screenshot 2024-11-22 024916](https://github.com/user-attachments/assets/c65cce87-a71a-4f2a-b339-2a6da63d002a)
+![Screenshot 2024-11-22 024947](https://github.com/user-attachments/assets/82bb7c0c-89f3-40b6-8cdb-d4037a8cd97a)
