@@ -18,7 +18,7 @@
 1. **Top-Down Design** : In this approach we first design the high-level objects and then we identify these smaller sub components. And then we design those sub components.
 2. **Bottom-Up Design**: In this approach we first design the smallest component and then we use those smallest components to design a bigger component. And this design approach is a aligned with the object-oriented design.
 ---
-
+<!--
 ## Design Parking Lot
 
 ### a. Requirements Gathering
@@ -214,6 +214,9 @@
 - **Design Pattern Used:**  
   This follows the **Strategy Design Pattern**, allowing flexible payment processing logic to be swapped in as needed.
 ---
+
+-->
+
  # Our Problem Statement
 - **A parking lot is an area where cars can be parked for a certain amount of time. A parking lot can have multiple floors with each floor having a different number of slots and each slot being suitable for different types of vehicles.**
 
@@ -452,3 +455,6 @@ Occupied slots for TRUCK on Floor 2: 1
 - Keep the code extensible to allow any other type of command. 
 - Keep the code extensible to allow multiple parking lots. You can assume that the input/output format can be changed for that. 
 - Keep the system thread-safe to allow concurrent requests.
+
+![Screenshot 2024-11-22 024916](https://github.com/user-attachments/assets/c65cce87-a71a-4f2a-b339-2a6da63d002a)
+![Screenshot 2024-11-22 024947](https://github.com/user-attachments/assets/82bb7c0c-89f3-40b6-8cdb-d4037a8cd97a)
